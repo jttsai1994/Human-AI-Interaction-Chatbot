@@ -32,7 +32,7 @@ def match_rule(rules, message):
             if '{0}' in response:
                 phrase = match.group(1)
     # Return the response and phrase
-    return response.format(phrase)
+    return response,phrase
 
 # Define replace_pronouns()
 def replace_pronouns(message):
