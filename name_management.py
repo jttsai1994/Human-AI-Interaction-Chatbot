@@ -10,9 +10,11 @@ def askName(userName,firstTime=1):
         replyName(userName)
     
 def replyName(userName):
-    reply = ["I know you are {Name}","Nice to hear from you again! {Name}","Everyone knows you are {Name}"]
+    reply = [f"I know you are {userName}",
+             f"Nice to hear from you again! {userName}",
+             f"Everyone knows you are {userName}"]
     if not userName: # if user has not been asked for Name
         askName(0)
     else:
-        print (random.choice(reply).format(userName))
+        print (random.choice(reply))
         return userName
