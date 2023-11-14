@@ -33,7 +33,8 @@ train_tf = tfidf_transformer.transform(train_counts)
 
 clf = LogisticRegression(random_state=0).fit(train_tf, question_numbers)
 
-import pickle
-with open("QA_Model.pickle", "wb") as f:
-    pickle.dump(clf , f)
+from joblib import dump
+dump(count_vect , 'count_vect.joblib')
+dump(tfidf_transformer , 'tfidf_transformer.joblib')
+dump(clf , 'classifier.joblib')
 
