@@ -3,6 +3,7 @@ count_vect = load('count_vect.joblib')
 tfidf_transformer = load('tfidf_transformer.joblib')
 clf = load('classifier.joblib')
 import csv
+import random
 
 qn_q={}
 q_a = {}
@@ -21,8 +22,8 @@ def answer(msg):
     new_data = [msg]
     processed_newdata = count_vect.transform(new_data) 
     processed_newdata = tfidf_transformer.transform(processed_newdata)
-    predict_question_number = clf.predict(processed_newdata)
+    predict_question_number = clf.predict(processed_newdata)[0] #it return a result in list
     answer = None
     if predict_question_number:
-        answer  = q_a[qn_q[predict_question_number]]
-    print(answer)
+        answer  = random.choice(q_a[qn_q[predict_question_number]])
+    return answer
