@@ -5,7 +5,9 @@ import match_rules
 import find_intent
 import match_intent
 import qa_matching
+import name_management
 def main():
+    userName = None
     stop = False
     while not stop:
         user_input = input(" (type anything to ask me, or enter 'stop' to quit) :")
@@ -16,7 +18,12 @@ def main():
         else:
             # response = find_intent.respond(user_input)          
             response = match_intent.match_intent(user_input)
-            if response == "default":
+
+            if response =="initiate":
+                userName = name_management.askName(userName)
+            elif response =="identity management":
+                userName = name_management.replyName(userName)
+            elif response == "default":
                 response = qa_matching.answer(user_input)
             print(response)
 
