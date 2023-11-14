@@ -1,4 +1,6 @@
 # import process
+import create_intent_model
+import creating_QA_model
 import match_rules
 import find_intent
 import match_intent
