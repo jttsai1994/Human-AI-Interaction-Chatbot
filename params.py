@@ -34,7 +34,9 @@ for intent, keys in keywords.items():
     patterns[intent] = re.compile('|'.join(keys))
 
 response_for_intent ={
-    "default":["Sorry, I can't understand you. Can you give more details","Please give me more details.","Can you say it again with specific keywords"],
+    "default":["default"],
+    "no Idea":["Sorry, I can't understand you. Can you give more details","Please give me more details.","Can you say it again with specific keywords"],
     "greet":["Nice to meet you! What can I help you?","Hi, are you alright?","Hello, good to see you again!"],
     "thankyou":["You're Welcome! What else can I help you?","No worries, glad to help you here"]
 }
+
