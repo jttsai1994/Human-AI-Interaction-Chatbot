@@ -1,12 +1,14 @@
 import process
-import functions
+import match_rules
+import find_intent
 def main():
     while True:
         user_input = input(" (type anything to ask me, or enter 'exit' to quit) :")
         if user_input.lower() == 'exit':
             print("Goodbye!")
             break
-        response = functions.send_message(user_input)
+        # response = match_rules.send_message(user_input)
+        response = find_intent.respond(user_input)
         print(response)
 
 
