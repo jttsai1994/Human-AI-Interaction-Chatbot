@@ -10,6 +10,7 @@ def main():
     userName = None
     stop = False
     while not stop:
+        print(f"userName is {userName}")
         user_input = input(" (type anything to ask me, or enter 'stop' to quit) :")
         if user_input.lower() == 'stop':
             print("Goodbye!")
