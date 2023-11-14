@@ -1,7 +1,7 @@
 import process
 import match_rules
 import find_intent
-
+import qa_matching
 def main():
     stop = False
     while not stop:
@@ -12,6 +12,8 @@ def main():
         # response = match_rules.send_message(user_input)
         else:
             response = find_intent.respond(user_input)
+            if response == "default":
+                response = qa_matching.answer(user_input)
             print(response)
 
 
