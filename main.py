@@ -18,13 +18,15 @@ def main():
         # response = match_rules.send_message(user_input)
         else:
             # response = find_intent.respond(user_input)          
-            response = match_intent.match_intent(user_input)
+            _intent = match_intent.match_intent(user_input)
 
-            if response =="initiate":
+            if _intent =="initiate":
                 userName = name_management.askName(userName)
-            elif response =="identity management":
+                response = f"Nice to meet you! {userName}"
+            elif _intent =="identity management":
                 userName = name_management.replyName(userName)
-            elif response == "default":
+                response = f"{userName}, What can I do for you"
+            elif _intent == "default":
                 response = qa_matching.answer(user_input)
             print(response)
 
