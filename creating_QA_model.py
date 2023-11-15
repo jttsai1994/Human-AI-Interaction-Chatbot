@@ -13,7 +13,7 @@ qn_q={}
 q_a = {}
 questions = []
 intents =[] 
-with open("./QA＿intent.csv", 'r',encoding='utf-8') as file:
+with open("./QA_intent.csv", 'r',encoding='utf-8') as file:
     csvreader = csv.reader(file)
     for row in csvreader:
         #store QuestionNumber-Question, Question-Answer
