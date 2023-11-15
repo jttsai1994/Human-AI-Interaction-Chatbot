@@ -7,7 +7,7 @@ def askName(userName,from_name_managment=0):
             userName = input("Sorry I don't know your name yet, please tell me: ")
         return userName
     else: #if bot already know userName but the user's intent as "initiate"
-        replyName(userName)
+        return replyName(userName)
     
 def replyName(userName):
     reply = [f"I know you are {userName}",
