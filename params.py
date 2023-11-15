@@ -33,10 +33,11 @@ for intent, keys in keywords.items():
     # Create regular expressions and compile them into pattern objects
     patterns[intent] = re.compile('|'.join(keys))
 
-response_for_intent ={
-    "default":["default"],
-    "no Idea":["Sorry, I can't understand you. Can you give more details","Please give me more details.","Can you say it again with specific keywords"],
+responses_usual ={
+    # "default":["default"],
+    "default":["Sorry, I can't understand you. Can you give more details","Please give me more details.","Can you say it again with specific keywords"],
     "greet":["Nice to meet you! What can I help you?","Hi, are you alright?","Hello, good to see you again!"],
-    "thankyou":["You're Welcome! What else can I help you?","No worries, glad to help you here"]
+    "thankyou":["You're Welcome! What else can I help you?","No worries, glad to help you here"],
+    "discoverability":["I am a chatbot for Human AI Interaction Final Coursework","I can answer some questions in the QA dataset.","I can answer some simple question."]
 }
 
