@@ -1,18 +1,19 @@
 import csv
-import os
-from sklearn.model_selection import train_test_split
-from nltk.corpus import stopwords
+# import os
+# from sklearn.model_selection import train_test_split
+# from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer 
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score , f1_score , confusion_matrix
-import nltk
-nltk.download('stopwords')
+# from sklearn.linear_model import LogisticRegression
+# from sklearn.metrics import accuracy_score , f1_score , confusion_matrix
+from joblib import dump
+from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
 qn_q={}
 q_a = {}
 questions = []
-question_numbers =[] 
-with open("./QA.csv", 'r',encoding='utf-8') as file:
+intents =[] 
+with open("./QA＿intent.csv", 'r',encoding='utf-8') as file:
     csvreader = csv.reader(file)
     for row in csvreader:
         #store QuestionNumber-Question, Question-Answer
@@ -23,18 +24,38 @@ with open("./QA.csv", 'r',encoding='utf-8') as file:
             q_a[row[1]]=[row[2]]
         
         questions.append(row[1])
-        question_numbers.append(row[0])
+        intents.append(row[0])
+dump(q_a,'QA_Dictionary')
+dump(qn_q,'Qid_Q_dict')
+from nltk.stem.snowball import PorterStemmer
+p_stemmer = PorterStemmer()
+analyzer = CountVectorizer().build_analyzer()
+def stemmed_words(doc):
+    return (p_stemmer.stem(w) for w in analyzer(doc))
 
-count_vect = CountVectorizer(stop_words=stopwords.words('english'))    
-train_counts = count_vect.fit_transform(questions)
+stem_vectorizer = CountVectorizer(analyzer=stemmed_words)    
+train_counts = stem_vectorizer.fit_transform(questions)
 
 tfidf_transformer = TfidfTransformer(use_idf=True, sublinear_tf=True).fit(train_counts)
 train_tf = tfidf_transformer.transform(train_counts)
 
-clf = LogisticRegression(random_state=0).fit(train_tf, question_numbers)
+# clf = LogisticRegression(random_state=0).fit(train_tf, intents)
 
-from joblib import dump
-dump(count_vect , 'count_vect.joblib')
-dump(tfidf_transformer , 'tfidf_transformer.joblib')
-dump(clf , 'classifier.joblib')
+# dump(stem_vectorizer , 'count_vect.joblib')
+# dump(tfidf_transformer , 'tfidf_transformer.joblib')
+# dump(train_tf , 'pretrainMatrix.joblib')
 
+# dump(clf , 'classifier.joblib')
+def answer(msg):
+    new_data = [msg]
+    processed_newdata = stem_vectorizer.transform(new_data) 
+    processed_newdata = tfidf_transformer.transform(processed_newdata)
+    scores = [cosine_similarity(processed_newdata, _q) for _q in train_tf]
+    possible_intent = intents[np.argmax(scores)]
+
+    possible_intent = "defualt"
+
+    if scores[np.argmax(scores)] > 0.8: #add a threhold of cos_similarity
+        possible_intent = intents[np.argmax(scores)]
+
+    return possible_intent
