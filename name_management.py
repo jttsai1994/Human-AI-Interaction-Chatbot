@@ -3,9 +3,10 @@ def askName(userName,from_name_managment=0):
     if not userName:
         if not from_name_managment:
             userName = input("Hi! Please tell me your name: ")
+            return userName
         else:
             userName = input("Sorry I don't know your name yet, please tell me: ")
-        return userName
+            return userName
     else: #if bot already know userName but the user's intent as "initiate"
         replyName(userName)
     
