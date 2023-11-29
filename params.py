@@ -36,8 +36,40 @@ for intent, keys in keywords.items():
 responses_usual ={
     # "default":["default"],
     "default":["Sorry, I can't understand you. Can you give more details","Please give me more details.","Can you say it again with specific keywords"],
-    "greet":["Nice to meet you! What can I help you?","Hi, are you alright?","Hello, good to see you again!"],
+    "greet":["Nice to meet you! Would you like to watch a movie?","Hi, let me help you to find a movie and enjoy in our cinema.","Hello, good to see you again! How about watching a movie?"],
     "thankyou":["You're Welcome! What else can I help you?","No worries, glad to help you here"],
     "discoverability":["I am a chatbot to help you book a ticket to the movie","I 'm here to help you get the ticket to the movie.","I can answer some simple question about how to book a movie ticket."]
+}
+# movie info
+movie={
+'Spider Man':0,
+'Joker': 1,
+'Oppenhimer':2,
+'Misson Impossible':3
+}
+responses_movie_list=[
+    f'Our current lineup features popular titles such as {list(movie.keys())}',
+    f'The cinema is currently showcasing a diverse selection of films, including {list(movie.keys())}',
+    f'"Of course! We have an exciting roster of films for you, including {list(movie.keys())}'
+    ]
+
+display_date={
+    0:[1,3,5,6],
+    1:[2,3,4,7],
+    2:[1,2,3,4,5,6,7],
+    3:[5,6,7]
+}
+display_time={
+    0:['09:00','14:00','18:00'],
+    1:['12:00','16:00','19:00'],
+    2:['11:30','13:30','16:00','17:30','20:00','21:00'],
+    3:['11:00','14:00','16:00','18:00']
+}
+
+display_room={
+    0:['room1','room2','room1'],
+    1:['room3','room3','room4'],
+    2:['room5','room5','room5','room5','room5','room5'],
+    3:['room2','room3','room2','room3']
 }
 
