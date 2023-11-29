@@ -9,8 +9,10 @@ import name_management
 from joblib import load
 import re
 import random
+from user import User
 def main():
-    userName = None
+    user = User()
+    userName = user.name
     stop = False
     qn_q= load('Qid_Q_dict')   #load params:qn_q
     q_a = load('QA_Dictionary') #load params:q_a
@@ -27,11 +29,12 @@ def main():
             # print(f"return intent from creating_QA_model.answer : {_intent}")   #for debugging
             if _intent =="initiate":
                 userName = name_management.askName(userName)
+                user.set_name(userName)
                 response = random.choice(replies['greet'])
             elif _intent =="identity management":
                 userName = name_management.replyName(userName)
                 response = f"{userName}, What can I do for you"
-            elif re.search('small*|Q*',_intent)[0] :  #response answer for Question and small talk
+            elif re.search('small*|Pricing*|Payment*|Location',_intent)[0] :  #response answer for Question and small talk
                 response = random.choice(q_a[qn_q[_intent]])
             elif _intent =="discoverability":
                 response = random.choice(replies[_intent])          
