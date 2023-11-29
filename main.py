@@ -37,7 +37,17 @@ def main():
             elif re.search('small*|Pricing*|Payment*|Location*',_intent) :  #response answer for Question and small talk
                 response = random.choice(q_a[qn_q[_intent]])
             elif _intent =="discoverability":
-                response = random.choice(replies[_intent])          
+                response = random.choice(replies[_intent]) 
+            elif _intent =="Movie Listings":
+                response = f"I know your intent is {_intent}"
+            elif _intent =="Movie Time":
+                response = f"I know your intent is {_intent}" 
+            elif _intent =="Booking Process":
+                response = f"I know your intent is {_intent}"
+            elif _intent =="Seat Availability":
+                response = f"I know your intent is {_intent}" 
+            elif _intent =="Confirmation":
+                response = f"I know your intent is {_intent}"       
             elif _intent == 'default': #defualt reply
                 response = random.choice(replies[_intent])
             print(response)
