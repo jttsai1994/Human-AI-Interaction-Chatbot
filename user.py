@@ -4,6 +4,7 @@ class User:
         self.confirm = False
         self.movie = None
         self.visitDate = None
+        self.visitTime = None
         self.payMethod = None
         self.pay = None
 

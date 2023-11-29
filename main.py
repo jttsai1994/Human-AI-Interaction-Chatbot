@@ -6,6 +6,7 @@ import creating_QA_model
 # import qa_matching
 import params
 import name_management
+import choose_moive
 from joblib import load
 import re
 import random
@@ -17,6 +18,7 @@ def main():
     qn_q= load('Qid_Q_dict')   #load params:qn_q
     q_a = load('QA_Dictionary') #load params:q_a
     replies = params.responses_usual
+    movie_list_replies = params.responses_movie_list
     while not stop:
         user_input = input(" (type anything to ask me, or enter 'stop' to quit) :")
         if user_input.lower() == 'stop':
@@ -33,13 +35,13 @@ def main():
                 response = random.choice(replies['greet'])
             elif _intent =="identity management":
                 userName = name_management.replyName(userName)
-                response = f"{userName}, What can I do for you"
+                response = f"{userName}, Which movie you want to watch in our cinema?"
             elif re.search('small*|Pricing*|Payment*|Location*',_intent) :  #response answer for Question and small talk
                 response = random.choice(q_a[qn_q[_intent]])
             elif _intent =="discoverability":
                 response = random.choice(replies[_intent]) 
             elif _intent =="Movie Listings":
-                response = f"I know your intent is {_intent}"
+                response = random.choice(movie_list_replies)
             elif _intent =="Movie Time":
                 response = f"I know your intent is {_intent}" 
             elif _intent =="Booking Process":
