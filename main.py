@@ -34,7 +34,7 @@ def main():
             elif _intent =="identity management":
                 userName = name_management.replyName(userName)
                 response = f"{userName}, What can I do for you"
-            elif re.search('small*|Pricing*|Payment*|Location',_intent)[0] :  #response answer for Question and small talk
+            elif re.search('small*|Pricing*|Payment*|Location*',_intent) :  #response answer for Question and small talk
                 response = random.choice(q_a[qn_q[_intent]])
             elif _intent =="discoverability":
                 response = random.choice(replies[_intent])          

@@ -38,6 +38,6 @@ responses_usual ={
     "default":["Sorry, I can't understand you. Can you give more details","Please give me more details.","Can you say it again with specific keywords"],
     "greet":["Nice to meet you! What can I help you?","Hi, are you alright?","Hello, good to see you again!"],
     "thankyou":["You're Welcome! What else can I help you?","No worries, glad to help you here"],
-    "discoverability":["I am a chatbot for Human AI Interaction Final Coursework","I can answer some questions in the QA dataset.","I can answer some simple question."]
+    "discoverability":["I am a chatbot to help you book a ticket to the movie","I 'm here to help you get the ticket to the movie.","I can answer some simple question about how to book a movie ticket."]
 }
 
