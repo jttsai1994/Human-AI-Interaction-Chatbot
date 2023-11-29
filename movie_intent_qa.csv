@@ -1,0 +1,118 @@
+small talk,How are you?,I'm pretty good! What can I help you?
+small talk,Are you alright,"Good, what are you looking for today?"
+small talk,Today is a nice day.,It might be. I am focusing on what I can help you today.
+discoverability,What can you do?,"
+"
+discoverability,What's your job?,"
+"
+discoverability,What can I ask for?,"
+"
+discoverability,Who are you?,"
+"
+discoverability,Is this a bot?,
+discoverability,Is there a bot chatting to me?,
+discoverability,Is it automated message?,
+discoverability,Computer based pely,
+discoverability,Bot or human?,
+discoverability,Bot is chatting with me?,
+discoverability,Are you system generated message?,
+discoverability,Are you robot?,
+discoverability,Are you machine?,
+discoverability,Are you just computer?,
+discoverability,Are you a robot?,
+discoverability,Are you a person?,
+discoverability,Are you a machine?,
+discoverability,Are you a chatbot?,
+discoverability,Are you a bot?,
+discoverability,Are these automated messages?,
+discoverability,Am I talking to a bot?,
+discoverability,This is a machine?,
+identity management,Who are youu?,
+identity management,My name?,
+identity management,Can you tell me your name?,
+identity management,Are you there?,
+identity management,What is my name?,
+identity management,are you abir?,
+identity management,My name is?,
+identity management,Who is chatting?,
+identity management,Who am I?,
+identity management,What's my name?,
+identity management,Tell me my name?,
+identity management,What am I called?,
+identity management,What's my name.,
+identity management,Who am I.,
+identity management,Do you know me.,
+Initiate,Hello,Nice to meet you.
+Initiate,Hi! How are you?,
+Initiate,Hi! ,Nice to meet you.
+Movie Listings,Can you provide a list of movies playing today?,
+Movie Listings,Could you share the current list of films available for viewing?,
+Movie Listings,What films are currently showing at the cinema?,
+Movie Listings,Can you offer details about the movies featured in the current lineup?,
+Movie Listings,What's the current selection of films playing in the theatre?,
+Movie Listings,Do you have information about the upcoming releases ,
+Movie Listings,Can you tell me which films are currently playing in cinema?,
+Movie Listings,What's the list of movies currently being featured at the cinema?,
+Movie Listings,Can you share the current roster of films showing at the cinema?,
+Movie Listings,What's currently on the movie bill at the theater?,
+Movie Time,What time does the evening show  start?,
+Movie Time,Are there any late-night showings for the action movie this Friday?,
+Movie Time,When is the matinee for the romantic comedy playing this Sunday?,
+Movie Time,"Can you share the schedule for the early morning showing of ""The Batman""?",
+Movie Time,Is there a specific time for the 3D showing this Saturday?,
+Movie Time,What are the showtimes for the movie?,
+Movie Time,Can you tell me when the movie is playing?,
+Movie Time,What time can I catch the movie?,
+Movie Time,Can you share the timetable for the movie?,
+Movie Time,What are the viewing times for the movie?,
+Movie Time,Can you let me know when the movie is being shown?,
+Booking Process,How can I book tickets for a movie?,
+Booking Process,What steps do I need to follow to book movie tickets online?,
+Booking Process,How do I go about reserving seats for a movie?,
+Booking Process,Can you guide me through the steps of securing tickets for a film?,
+Booking Process,What's the procedure for booking movie tickets?,
+Booking Process,Could you explain how to go about purchasing movie tickets online?,
+Booking Process,How can I initiate the movie ticket booking process?,
+Booking Process,What do I need to do to confirm my movie ticket reservation?,
+Booking Process,Can you provide details on how to go through the movie booking system,
+Seat Availability,Could you let me know if there are any seats left for?,
+Seat Availability,What's the occupancy like for the evening show?,
+Seat Availability,"Are there any available seats for the movie ""Avengers"" tonight?",
+Seat Availability,Can I still get tickets for the 7 PM show of?,
+Seat Availability,Are there still seats available for the 8 PM showing tonight?,
+Seat Availability,Can you check the availability of seats for the upcoming animated film this Sunday?,
+Seat Availability,Could you let me know if there are any seats left?,
+Seat Availability,What's the seat status for the special screening of the classic movie next week?,
+Seat Availability,Can you check if there are any open seats left for the movie this weekend?,
+Seat Availability,Are there any available seats for the upcoming blockbuster movie on Saturday,
+Seat Availability,Can you verify if seats are still open for the late-night showing,
+Pricing and Discounts,What is the ticket price for adults and children?,"In the morning: For adults, the ticket price is £10, and for children, it is £3. In the evening: For adults, the ticket price is £15, and for children, it is £5."
+Pricing and Discounts,Are there any discounts available for senior citizens?,"Yes, senior citizens enjoy a discounted ticket price of £3 for morning shows and £5 for evening shows."
+Pricing and Discounts,How much does it cost for a ticket to the evening show,"The ticket price for the evening show is £15 for adults, £5 for children, and £8 for students."
+Pricing and Discounts,What's the ticket price difference between adult and child tickets for the latest animated movie?,"The ticket price for adults is £10, and for children, it's £3, resulting in a £7 difference."
+Pricing and Discounts,Are there any discounts available for students for the afternoon show?,"Yes, students receive a discounted ticket price of £5 for afternoon shows and £8 for evening shows."
+Pricing and Discounts,Do you offer senior citizen discounts for the early morning movie screenings," Yes, senior citizens enjoy a discounted ticket price of £3 for morning shows and £5 for evening shows."
+Pricing and Discounts,Are there any promotional offers or discounts for the midnight premiere of the film?,There are no additional discounts or promotional offers for the midnight premiere. The regular ticket prices apply.
+Payment Methods,Can I pay for my movie tickets using digital wallets like Apple Pay or Google Pay,"Yes, we accept payments through digital wallets such as Apple Pay and Google Pay for online movie bookings."
+Payment Methods,What payment methods are accepted for online booking?,"You can use various payment methods for online booking, including credit cards, debit cards, digital wallets like Apple Pay and Google Pay, and online services such as PayPal."
+Payment Methods,Can I pay for the tickets with a credit card?,"Absolutely, credit card payments are accepted for purchasing movie tickets, both online and at the ticket counter."
+Payment Methods,Do you accept online payment methods like PayPal for movie bookings?,"Yes, we do accept online payment methods like PayPal for booking movie tickets through our online platform."
+Payment Methods,Are there any restrictions on the types of debit cards accepted for ticket purchases?,"Generally, we accept a wide range of debit cards for purchasing movie tickets. However, please check for any specific restrictions or supported card types on our booking platform or inquire at the ticket counter."
+Payment Methods,"Can I use contactless payment methods, such as NFC-enabled cards, for movie ticket purchases?","Yes, we support contactless payment methods, including NFC-enabled cards, for both online and in-person movie ticket transactions."
+Payment Methods,Is it possible to use a credit card for ticket payment?,"Absolutely, credit card payments are accepted for purchasing movie tickets, both online and at the ticket counter."
+Payment Methods,Is it okay to pay for the tickets with a credit card?,"Absolutely, credit card payments are accepted for purchasing movie tickets, both online and at the ticket counter."
+Payment Methods,Is credit card payment an acceptable method for ticket purchases?,"Absolutely, credit card payments are accepted for purchasing movie tickets, both online and at the ticket counter."
+Confirmation,How will I receive confirmation of my booking?,
+Confirmation,Is there a confirmation email or SMS sent after I book movie tickets online?,
+Confirmation,Can I check the status of my movie booking to ensure it's confirmed?,
+Confirmation,Are there any reference numbers or codes provided for confirming my movie reservation?,
+Confirmation,How do I know if my online movie ticket purchase has been successfully confirmed?,
+Confirmation,Is there a way for me to verify that my movie booking is confirmed?,
+Confirmation,Could I inquire about the current confirmation status of my movie booking?,
+Confirmation,How can I double-check the confirmation status of my movie booking?,
+Location,Where is your cinema located?,"Our cinema is located at 233 Derby Rd, Nottingham NG7 1QN."
+Location,Where exactly is the cinema located,"You can find our cinema at 233 Derby Rd, Nottingham NG7 1QN. It's centrally located for your convenience."
+Location,What's the street address of the cinema where the movie is playing?,"The street address of our cinema, where the movie is playing, is 233 Derby Rd, Nottingham NG7 1QN."
+Location,Could you share the exact location of the movie theatre,"The movie theatre is situated at 233 Derby Rd, Nottingham NG7 1QN. You can easily locate it for an enjoyable movie experience."
+Location,Where am I able to locate the cinema,"You can locate our cinema at 233 Derby Rd, Nottingham NG7 1QN. It's easily accessible, and we look forward to welcoming you."
+Location,Could you direct me to the cinema by providing clear location instructions?,"Certainly! Head to 233 Derby Rd, Nottingham NG7 1QN. If you need precise directions, feel free to use a map app or contact our customer service for assistance."
