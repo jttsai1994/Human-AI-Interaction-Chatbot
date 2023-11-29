@@ -43,8 +43,9 @@ identity management,What's my name.,
 identity management,Who am I.,
 identity management,Do you know me.,
 Initiate,Hello,Nice to meet you.
-Initiate,Hi! How are you?,
-Initiate,Hi! ,Nice to meet you.
+initiate,Hello,Nice to meet you.
+initiate,Hi! How are you?,
+initiate,Hi! ,Nice to meet you.
 Movie Listings,Can you provide a list of movies playing today?,
 Movie Listings,Could you share the current list of films available for viewing?,
 Movie Listings,What films are currently showing at the cinema?,
