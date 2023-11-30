@@ -4,10 +4,15 @@ tfidf_transformer = load('tfidf_transformer.joblib')
 clf = load('classifier.joblib')
 import csv
 import random
+import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
+
 
 qn_q={}
 q_a = {}
-with open("./QA.csv", 'r',encoding='utf-8') as file:
+questions = []
+intents =[] 
+with open("./QA＿intent.csv", 'r',encoding='utf-8') as file:
     csvreader = csv.reader(file)
     for row in csvreader:
         #store QuestionNumber-Question, Question-Answer
@@ -17,13 +22,17 @@ with open("./QA.csv", 'r',encoding='utf-8') as file:
         else:
             q_a[row[1]]=[row[2]]
         
+        questions.append(row[1])
+        intents.append(row[0])
+        
 
 def answer(msg):
     new_data = [msg]
     processed_newdata = count_vect.transform(new_data) 
     processed_newdata = tfidf_transformer.transform(processed_newdata)
-    predict_question_number = clf.predict(processed_newdata)[0] #it return a result in list
-    answer = None
-    if predict_question_number:
-        answer  = random.choice(q_a[qn_q[predict_question_number]])
-    return answer
+    possible_intent = clf.predict(processed_newdata)[0] #it return a result in list, I want to retrieve string
+
+    # answer = None
+    # if predict_question_number:
+    #     answer  = random.choice(q_a[qn_q[predict_question_number]])
+    return possible_intent
