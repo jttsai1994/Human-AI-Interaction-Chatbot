@@ -53,7 +53,7 @@ def answer(msg):
     scores = [cosine_similarity(processed_newdata, _q) for _q in train_tf]
     possible_intent = intents[np.argmax(scores)]
 
-    possible_intent = "defualt"
+    possible_intent = "default"
 
     if scores[np.argmax(scores)] > 0.8: #add a threhold of cos_similarity
         possible_intent = intents[np.argmax(scores)]
