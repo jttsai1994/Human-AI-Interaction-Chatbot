@@ -5,14 +5,13 @@ import choose_movie_time
 def booking(user):
     movie_pattern = "|".join(params.movie_list).lower()
     stop = False
-    while not all([user.movie,user.visitDate]):
+    while not all([user.movie,user.visitDate,user.visitTime]):
     # while not all([user.movie,user.visitDate,user.visitTime,user.payMethod]):
         choose_movie.ask_which_movie(user)
         choose_movie_time.decide_date(user)
-        if not user.visitTime:
-            pass
+        choose_movie_time.decide_Time(user)
 
-        elif not user.payMethod:
+        if not user.payMethod:
             pass
 
         elif not user.confirm:
