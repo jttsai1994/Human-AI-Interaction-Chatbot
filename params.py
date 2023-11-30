@@ -41,16 +41,17 @@ responses_usual ={
     "discoverability":["I am a chatbot to help you book a ticket to the movie","I 'm here to help you get the ticket to the movie.","I can answer some simple question about how to book a movie ticket."]
 }
 # movie info
+movie_list = ['Spider Man','Joker','Oppenhimer','Misson Impossible']
 movie={
-'Spider Man':0,
-'Joker': 1,
-'Oppenhimer':2,
-'Misson Impossible':3
+'spider man':0,
+'joker': 1,
+'oppenhimer':2,
+'misson impossible':3
 }
 responses_movie_list=[
-    f'Our current lineup features popular titles such as {list(movie.keys())}',
-    f'The cinema is currently showcasing a diverse selection of films, including {list(movie.keys())}',
-    f'"Of course! We have an exciting roster of films for you, including {list(movie.keys())}'
+    f'Our current lineup features popular titles such as {movie_list}',
+    f'The cinema is currently showcasing a diverse selection of films, including {movie_list}',
+    f'"Of course! We have an exciting roster of films for you, including {movie_list}'
     ]
 
 display_date={
