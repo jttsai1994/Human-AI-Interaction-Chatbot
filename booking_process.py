@@ -5,7 +5,8 @@ import choose_movie_time
 def booking(user):
     movie_pattern = "|".join(params.movie_list).lower()
     stop = False
-    while not stop:
+    while not all([user.movie,user.visitDate]):
+    # while not all([user.movie,user.visitDate,user.visitTime,user.payMethod]):
         choose_movie.ask_which_movie(user)
         choose_movie_time.decide_date(user)
         if not user.visitTime:
@@ -18,11 +19,5 @@ def booking(user):
             pass
         
         
-
-
-        user_input = input(" (enter 'stop' to quit,or press enter to continue): ")
-        if user_input.lower() == 'stop':
-            print("Goodbye!")
-            stop = True
         # response = match_rules.send_message(user_input)
         

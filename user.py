@@ -6,7 +6,7 @@ class User:
         self.visitDate = None
         self.visitTime = None
         self.payMethod = None
-        self.pay = None
+
 
     def set_name(self,name):
         self.name = name
