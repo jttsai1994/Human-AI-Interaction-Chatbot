@@ -1,8 +1,12 @@
 from params import movie_list
 import re
+import random
+from params import responses_movie_list
+import params
 def ask_which_movie(user):
     movie_pattern = "|".join(movie_list).lower()
     if not user.movie:
+        print(random.choice(responses_movie_list))
         print("Seems like you haven't choose a movie to watch")
         user_ans= input("What do you want to watch? :")
         if re.search(movie_pattern,user_ans.lower()):

@@ -51,7 +51,7 @@ movie={
 responses_movie_list=[
     f'Our current lineup features popular titles such as {movie_list}',
     f'The cinema is currently showcasing a diverse selection of films, including {movie_list}',
-    f'"Of course! We have an exciting roster of films for you, including {movie_list}'
+    f'We have an exciting roster of films for you, including {movie_list}'
     ]
 
 display_date={
