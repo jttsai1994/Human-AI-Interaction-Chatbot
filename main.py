@@ -3,7 +3,7 @@
 import creating_QA_model
 # import match_rules
 # import find_intent
-import qa_matching
+# import qa_matching
 import params
 import name_management
 import choose_moive
@@ -28,7 +28,7 @@ def main():
         else:
             # response = find_intent.respond(user_input)          
             _intent = creating_QA_model.answer(user_input)
-            print(f"test classifier to find intent: {qa_matching.answer(user_input)}")
+            print(f"test classifier to find intent: {creating_QA_model.answer_clf(user_input)}")
             print(f"return intent from creating_QA_model.answer : {_intent}")   #for debugging
             if _intent =="initiate":
                 userName = name_management.askName(userName)
