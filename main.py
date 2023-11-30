@@ -44,9 +44,10 @@ def main():
                 response = f"I know your intent is {_intent}" 
                 booking_process.booking(this_user)
             elif _intent =="discoverability":
-                response = random.choice(replies[_intent]) 
+                response = random.choice(replies[_intent]) + random.choice(movie_list_replies)
             elif _intent =="Movie Listings":
                 response = random.choice(movie_list_replies)
+                booking_process.booking(this_user)
             elif _intent =="Movie Time":
                 response = f"I know your intent is {_intent}" 
             elif _intent =="Booking Process":
