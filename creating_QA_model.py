@@ -4,7 +4,7 @@ import csv
 # from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer 
-# from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LogisticRegression
 # from sklearn.metrics import accuracy_score , f1_score , confusion_matrix
 from joblib import dump
 from sklearn.metrics.pairwise import cosine_similarity
@@ -39,13 +39,13 @@ train_counts = stem_vectorizer.fit_transform(questions)
 tfidf_transformer = TfidfTransformer(use_idf=True, sublinear_tf=True).fit(train_counts)
 train_tf = tfidf_transformer.transform(train_counts)
 
-# clf = LogisticRegression(random_state=0).fit(train_tf, intents)
+clf = LogisticRegression(random_state=0).fit(train_tf, intents)
 
 # dump(stem_vectorizer , 'count_vect.joblib')
 # dump(tfidf_transformer , 'tfidf_transformer.joblib')
 # dump(train_tf , 'pretrainMatrix.joblib')
 
-# dump(clf , 'classifier.joblib')
+dump(clf , 'classifier.joblib')
 def answer(msg):
     new_data = [msg]
     processed_newdata = stem_vectorizer.transform(new_data) 
