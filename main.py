@@ -39,6 +39,8 @@ def main():
                 response = f"{userName}, Which movie you want to watch in our cinema?"
             elif re.search('small*|Pricing*|Payment*|Location*',_intent) :  #response answer for Question and small talk
                 response = random.choice(q_a[qn_q[_intent]])
+            elif _intent =="Decide movie":
+                response = f"I know your intent is {_intent}"  
             elif _intent =="discoverability":
                 response = random.choice(replies[_intent]) 
             elif _intent =="Movie Listings":
