@@ -51,7 +51,7 @@ def main():
                 booking_process.booking(this_user)
             elif _intent =="Movie Time":
                 response = f"I know your intent is {_intent}" 
-                timetable(this_user)
+                timetable.which_timetable(this_user)
             elif _intent =="Booking Process":
                 response = f"I know your intent is {_intent}"
             elif _intent =="Seat Availability":
