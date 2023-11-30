@@ -27,9 +27,10 @@ def main():
         # response = match_rules.send_message(user_input)
         else:
             # response = find_intent.respond(user_input)          
-            _intent = creating_QA_model.answer(user_input)
-            print(f"test classifier to find intent: {creating_QA_model.answer_clf(user_input)}")
-            print(f"return intent from creating_QA_model.answer : {_intent}")   #for debugging
+            # _intent = creating_QA_model.answer(user_input)
+            _intent = creating_QA_model.answer_clf(user_input)
+            print(f"find intent by classifier : {creating_QA_model.answer_clf(user_input)}")
+            print(f"find intent by similariity: {creating_QA_model.answer(user_input)}")   #for debugging
             if _intent =="initiate":
                 userName = name_management.askName(userName)
                 user.set_name(userName)
