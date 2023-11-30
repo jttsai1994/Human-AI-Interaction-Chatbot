@@ -7,6 +7,7 @@ import creating_QA_model
 import params
 import name_management
 import booking_process
+import timetable
 from joblib import load
 import re
 import random
@@ -50,6 +51,7 @@ def main():
                 booking_process.booking(this_user)
             elif _intent =="Movie Time":
                 response = f"I know your intent is {_intent}" 
+                timetable(this_user)
             elif _intent =="Booking Process":
                 response = f"I know your intent is {_intent}"
             elif _intent =="Seat Availability":
