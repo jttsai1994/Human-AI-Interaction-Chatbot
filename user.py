@@ -14,5 +14,7 @@ class User:
         self.movie = movie
     def visit_at(self,date):
         self.visitDate = date
+    def visit_time(self,time):
+        self.visitTime = time
     def pay_by(self,method):
         self.payMethod = method
