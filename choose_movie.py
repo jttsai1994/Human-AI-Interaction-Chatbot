@@ -23,4 +23,3 @@ def ask_which_movie(user):
         else:
             print(f"Seems like you are interested in watching {user.movie}")
     
-    return (user.movie or leave)
