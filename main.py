@@ -12,8 +12,8 @@ import re
 import random
 from user import User
 def main():
-    user = User()
-    userName = user.name
+    this_user = User()
+    userName = this_user.name
     stop = False
     qn_q= load('Qid_Q_dict')   #load params:qn_q
     q_a = load('QA_Dictionary') #load params:q_a
@@ -33,7 +33,7 @@ def main():
             print(f"find intent by similariity: {creating_QA_model.answer(user_input)}")   #for debugging
             if _intent =="initiate":
                 userName = name_management.askName(userName)
-                user.set_name(userName)
+                this_user.set_name(userName)
                 response = random.choice(replies['greet'])
             elif _intent =="identity management":
                 userName = name_management.replyName(userName)
@@ -42,7 +42,7 @@ def main():
                 response = random.choice(q_a[qn_q[_intent]])
             elif _intent =="Decide movie":
                 response = f"I know your intent is {_intent}" 
-                booking_process(user)
+                booking_process(this_user)
             elif _intent =="discoverability":
                 response = random.choice(replies[_intent]) 
             elif _intent =="Movie Listings":
