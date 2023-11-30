@@ -10,11 +10,12 @@ def ask_which_movie(user):
         if not user.movie:
             print(random.choice(responses_movie_list))
             print("Seems like you haven't choose a movie to watch")
-            user_ans= input("What do you want to watch? :")
-            if re.search(movie_pattern,user_ans.lower()):
-                user_movie = re.search(movie_pattern,user_ans.lower())[0]
+            user_ans= input(f"What do you want to watch? (within {list(range(1,len(movie_list)+1))}):")
+            if int(user_ans) in list(range(1,len(movie_list)+1)):
+                interested_movie_index = int(user_ans)-1
+                user_movie = movie_list[interested_movie_index].lower()
                 user.target_movie(user_movie)
-                print(f"OK, we will choose {user_movie} for you")
+                print(f"OK, we will choose {user_movie.upper()} for you")
             else:
                 print(f"Sorry, we can't arrange with your answer.")
                 decide_yet = input("Have you decided which movie? (Y/N): ")
