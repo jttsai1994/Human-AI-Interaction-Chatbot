@@ -41,7 +41,7 @@ def main():
                 response = random.choice(q_a[qn_q[_intent]])
             elif _intent =="Decide movie":
                 response = f"I know your intent is {_intent}" 
-
+                booking_process(user)
             elif _intent =="discoverability":
                 response = random.choice(replies[_intent]) 
             elif _intent =="Movie Listings":
