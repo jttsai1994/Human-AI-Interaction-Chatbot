@@ -35,10 +35,10 @@ for intent, keys in keywords.items():
 
 responses_usual ={
     # "default":["default"],
-    "default":["Sorry, I can't understand you. Can you give more details","Please give me more details.","Can you say it again with specific keywords"],
+    "default":["Sorry, I can't understand you. Can you give more details","Please give me more details.","Can you say it again with specific keywords."],
     "greet":["Nice to meet you! Would you like to watch a movie?","Hi, let me help you to find a movie and enjoy in our cinema.","Hello, good to see you again! How about watching a movie?"],
-    "thankyou":["You're Welcome! What else can I help you?","No worries, glad to help you here"],
-    "discoverability":["I am a chatbot to help you book a ticket to the movie","I 'm here to help you get the ticket to the movie.","I can answer some simple question about how to book a movie ticket."]
+    "thankyou":["You're Welcome! What else can I help you?","No worries, glad to help you here."],
+    "discoverability":["I am a chatbot to help you book a ticket to the movie.","I 'm here to help you get the ticket to the movie.","I can answer some simple question about how to book a movie ticket."]
 }
 # movie info
 movie_list = ['Spider Man','Joker','Oppenhimer','Mission Impossible']
@@ -49,9 +49,9 @@ movie={
 'mission impossible':3
 }
 responses_movie_list=[
-    f'Our current lineup features popular titles such as {movie_list}',
-    f'The cinema is currently showcasing a diverse selection of films, including {movie_list}',
-    f'We have an exciting roster of films for you, including {movie_list}'
+    f'Our current lineup features popular titles such as {movie_list}.',
+    f'The cinema is currently showcasing a diverse selection of films, including {movie_list}.',
+    f'We have an exciting roster of films for you, including {movie_list}.'
     ]
 
 display_date={
