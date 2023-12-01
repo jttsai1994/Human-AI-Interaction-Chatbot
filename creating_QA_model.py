@@ -65,7 +65,8 @@ def answer_clf(msg):
     processed_newdata = stem_vectorizer.transform(new_data) 
     processed_newdata = tfidf_transformer.transform(processed_newdata)
     possible_intent = clf.predict(processed_newdata)[0] #it return a result in list, I want to retrieve string
-
+    probabilities = clf.predict_proba(processed_newdata)[:, 1]
+    print(f'the probabilities to be {possible_intent} is: {probabilities}')
     # answer = None
     # if predict_question_number:
     #     answer  = random.choice(q_a[qn_q[predict_question_number]])
