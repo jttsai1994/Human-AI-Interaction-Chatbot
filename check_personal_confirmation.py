@@ -5,9 +5,14 @@ from params import responses_movie_list
 def booked_details(user):
     if user.movie:
         change_booking = False
-        msg= f''' 
-    Hello {user.name}, you will watch {user.movie.upper()} on {user.visitDate} / {user.visitTime}
-    '''
+        if user.name:
+            msg= f''' 
+Hello {user.name}, you will watch {user.movie.upper()} on {user.visitDate} / {user.visitTime}
+        '''
+        else:
+            msg= f''' 
+You will watch {user.movie.upper()} on {user.visitDate} / {user.visitTime}
+        '''
         print(f'{msg}')
         _ans = input('Do you want to change your booking? (Y/N) : ')
         if re.search('y*',_ans.lower())[0]:
