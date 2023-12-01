@@ -8,8 +8,8 @@ def decide_date(user):
     days_pattern = '|'.join(list(days_mapping.values())).lower()
     while not user.visitDate:
         if not user.visitDate:
-            print(f"Seems like you haven't choose the Date to watch {user.movie}")
-            user_ans= input(f" We can watch {user.movie} on:{days_list}, which day would you like?: ")
+            print(f"Seems like you haven't choose the Date to watch {user.movie.upper()}")
+            user_ans= input(f" We can watch {user.movie.upper()} on:{days_list}, which day would you like?: ")
             if re.search(days_pattern,user_ans.lower()):
                 user_date = re.search(days_pattern,user_ans.lower())[0]
                 user.visit_at(user_date.upper())

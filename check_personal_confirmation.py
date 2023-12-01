@@ -6,7 +6,7 @@ def booked_details(user):
     if user.movie:
         change_booking = False
         msg= f''' 
-    Hello {user.name}, you will watch {user.movie} on {user.visitDate} / {user.visitTime}
+    Hello {user.name}, you will watch {user.movie.upper()} on {user.visitDate} / {user.visitTime}
     '''
         print(f'{msg}')
         _ans = input('Do you want to change your booking? (Y/N) : ')
