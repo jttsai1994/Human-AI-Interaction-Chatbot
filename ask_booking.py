@@ -13,6 +13,8 @@ def start_booking(user):
     print(random.choice(responses_movie_list))
     _ans = input("Would you like to book a movie ticket right away? (Y/N):")
     if re.search('y*',_ans.lower())[0]:
+        print("OK, let's start the booking process")
+        time.sleep(1)
         booking_process.booking(user)
     else:
         print("You still have time to make a decision! No worries!") 
