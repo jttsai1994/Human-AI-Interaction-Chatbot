@@ -30,7 +30,10 @@ def main():
         else:
             # response = find_intent.respond(user_input)          
             # _intent = creating_QA_model.answer(user_input)
-            _intent = creating_QA_model.answer_clf(user_input)
+            if re.search('small*|Pricing*|Payment*|Location*',creating_QA_model.answer(user_input)):
+                _intent = creating_QA_model.answer(user_input)
+            else:
+                _intent = creating_QA_model.answer_clf(user_input)
             print(f"find intent by classifier : {creating_QA_model.answer_clf(user_input)}")
             print(f"find intent by similariity: {creating_QA_model.answer(user_input)}")   #for debugging
             if _intent =="initiate":
