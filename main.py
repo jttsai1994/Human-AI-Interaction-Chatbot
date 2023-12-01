@@ -8,6 +8,7 @@ import params
 import name_management
 import booking_process
 import timetable
+import check_personal_confirmation as p_confirm
 from joblib import load
 import re
 import random
@@ -57,7 +58,8 @@ def main():
             elif _intent =="Seat Availability":
                 response = f"I know your intent is {_intent}" 
             elif _intent =="Confirmation":
-                response = f"I know your intent is {_intent}"       
+                response = f"I know your intent is {_intent}" 
+                p_confirm.booked_details(this_user)      
             elif _intent == 'default': #defualt reply
                 response = random.choice(replies[_intent])
             print(response)
