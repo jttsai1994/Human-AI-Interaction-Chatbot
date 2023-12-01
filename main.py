@@ -31,7 +31,7 @@ def main():
         else:
             # response = find_intent.respond(user_input)          
             # _intent = creating_QA_model.answer(user_input)
-            if re.search('small*|Pricing*|Payment*|Location*',creating_QA_model.answer(user_input)):
+            if re.search('small*|Pricing*|Payment*|Location*|identity',creating_QA_model.answer(user_input)):
                 _intent = creating_QA_model.answer(user_input)
             else:
                 _intent = creating_QA_model.answer_clf(user_input)
@@ -44,8 +44,6 @@ def main():
                 print(response)
             elif _intent =="identity management":
                 userName = name_management.replyName(userName)
-                response = f"{userName}, Which movie you want to watch in our cinema?"
-                print(response)
             elif re.search('small*|Pricing*|Payment*|Location*',_intent) :  #response answer for Question and small talk
                 response = random.choice(q_a[qn_q[_intent]])
                 print(response)
