@@ -8,7 +8,7 @@ def askName(user,from_name_managment=0):
         user.set_name(userName)
         return user.name
     else: #if bot already know userName but the user's intent as "initiate"
-        return replyName(user.name)
+        return replyName(user)
     
 def replyName(user):
     reply = [f"I know you are {user.name}",

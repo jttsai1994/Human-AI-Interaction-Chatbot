@@ -45,6 +45,8 @@ def main():
                 print(random.choice(movie_list_replies))
             elif _intent =="identity management":
                 name_management.replyName(this_user)
+                time.sleep(2)
+                print(random.choice(movie_list_replies))
             elif re.search('small*|Pricing*|Payment*|Location*',_intent) :  #response answer for Question and small talk
                 response = random.choice(q_a[qn_q[_intent]])
                 print(response)
