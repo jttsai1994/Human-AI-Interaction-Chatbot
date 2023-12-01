@@ -18,3 +18,13 @@ class User:
         self.visitTime = time
     def pay_by(self,method):
         self.payMethod = method
+    def reset_all_booking_details(self):
+        self.confirm = False
+        self.movie = None
+        self.visitDate = None
+        self.visitTime = None
+        self.payMethod = None        
+    def reset_visitDate(self):
+        self.visitDate = None
+    def reset_visitTime(self):
+        self.visitTime = None
