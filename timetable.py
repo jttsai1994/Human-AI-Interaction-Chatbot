@@ -12,7 +12,7 @@ def which_timetable(user):
         perform_date = [days_mapping[index] for index in params.display_date[interested_movie_index]]
         perform_time = params.display_time[interested_movie_index]
         print(f"""
-OK, the movie {movie_list[interested_movie_index]} will be played on {perform_date}
+OK, the movie {movie_list[interested_movie_index].upper()} will be played on {perform_date}
 The time is shown as follows {perform_time}. """)
     else:
         print(f"Sorry, we can't arrange with your answer.")
@@ -20,5 +20,5 @@ The time is shown as follows {perform_time}. """)
         interested_movie_index = params.movie[user.movie]
         perform_date = [days_mapping[index] for index in params.display_date[interested_movie_index]]
         perform_time = params.display_time[interested_movie_index]
-        print(f"You booked for the movie {user.movie}")
-        print(f"{user.movie} will be played on {perform_date}, and the time is shown as follows {perform_time} ")
+        print(f"You booked for the movie {user.movie.upper()}")
+        print(f"{user.movie.upper()} will be played on {perform_date}, and the time is shown as follows {perform_time} ")

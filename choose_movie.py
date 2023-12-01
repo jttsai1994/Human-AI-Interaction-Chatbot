@@ -28,5 +28,5 @@ def ask_which_movie(user):
                 if 'n' in decide_yet.lower():
                     leave = True
         else:
-            print(f"Seems like you are interested in watching {user.movie}")
+            print(f"Seems like you are interested in watching {user.movie.upper()}")
     
