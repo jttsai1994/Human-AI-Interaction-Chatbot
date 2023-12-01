@@ -1,5 +1,4 @@
-# import process
-# import create_intent_model
+import time
 import creating_QA_model
 # import match_rules
 # import find_intent
@@ -22,6 +21,7 @@ def main():
     q_a = load('QA_Dictionary') #load params:q_a
     replies = params.responses_usual
     movie_list_replies = params.responses_movie_list
+    print("Hi, I am a movie ticket booking assistant. Feel free to ask me some question or start booking a movie ticket.")
     while not stop:
         user_input = input(" (type anything to ask me, or enter 'stop' to quit) :")
         if user_input.lower() == 'stop':
@@ -38,12 +38,13 @@ def main():
             print(f"find intent by classifier : {creating_QA_model.answer_clf(user_input)}")
             print(f"find intent by similariity: {creating_QA_model.answer(user_input)}")   #for debugging
             if _intent =="initiate":
-                userName = name_management.askName(userName)
-                this_user.set_name(userName)
+                name_management.askName(this_user)               
                 response = random.choice(replies['greet'])
                 print(response)
+                time.sleep(2)
+                print(random.choice(movie_list_replies))
             elif _intent =="identity management":
-                userName = name_management.replyName(userName)
+                name_management.replyName(this_user)
             elif re.search('small*|Pricing*|Payment*|Location*',_intent) :  #response answer for Question and small talk
                 response = random.choice(q_a[qn_q[_intent]])
                 print(response)
