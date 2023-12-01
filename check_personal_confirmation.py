@@ -10,7 +10,7 @@ def booked_details(user):
     '''
         print(f'{msg}')
         _ans = input('Do you want to change your booking? (Y/N) : ')
-        if re.search('y*',_ans.lower()[0]):
+        if re.search('y*',_ans.lower())[0]:
             change_booking = True
         else:
             print(f"Enjoy the movie {user.movie} on {user.visitDate}!")
@@ -33,7 +33,7 @@ def booked_details(user):
         print("Seems like you have not made any movie ticket reservation")
         print(random.choice(responses_movie_list))
         _ans = input("Would you like to book a movie ticket right away? (Y/N):")
-        if re.search('y*',_ans.lower()[0]):
+        if re.search('y*',_ans.lower())[0]:
             booking_process.booking(user)
         else:
             print("You still have time to make a decision! No worries!")
