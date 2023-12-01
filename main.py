@@ -9,6 +9,7 @@ import name_management
 import booking_process
 import timetable
 import check_personal_confirmation as p_confirm
+import ask_booking
 from joblib import load
 import re
 import random
@@ -40,32 +41,35 @@ def main():
                 userName = name_management.askName(userName)
                 this_user.set_name(userName)
                 response = random.choice(replies['greet'])
+                print(response)
             elif _intent =="identity management":
                 userName = name_management.replyName(userName)
                 response = f"{userName}, Which movie you want to watch in our cinema?"
+                print(response)
             elif re.search('small*|Pricing*|Payment*|Location*',_intent) :  #response answer for Question and small talk
                 response = random.choice(q_a[qn_q[_intent]])
+                print(response)
             elif _intent =="Decide movie":
-                response = f"I know your intent is {_intent}" 
                 booking_process.booking(this_user)
             elif _intent =="discoverability":
                 response = random.choice(replies[_intent]) + random.choice(movie_list_replies)
+                print(response)
             elif _intent =="Movie Listings":
                 response = random.choice(movie_list_replies)
+                print(response)
                 booking_process.booking(this_user)
             elif _intent =="Movie Time":
-                response = f"I know your intent is {_intent}" 
                 timetable.which_timetable(this_user)
             elif _intent =="Booking Process":
-                response = f"I know your intent is {_intent}"
+                ask_booking.start_booking(this_user)
             elif _intent =="Seat Availability":
-                response = f"I know your intent is {_intent}" 
+                response = f"I know your intent is {_intent}"
+                print(response)
             elif _intent =="Confirmation":
-                response = f"I know your intent is {_intent}" 
                 p_confirm.booked_details(this_user)      
             elif _intent == 'default': #defualt reply
                 response = random.choice(replies[_intent])
-            print(response)
+                print(response)
 
 
 
