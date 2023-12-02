@@ -41,11 +41,11 @@ responses_usual ={
     "discoverability":["I am a chatbot to help you book a ticket to the movie.","I 'm here to help you get the ticket to the movie.","I can answer some simple question about how to book a movie ticket."]
 }
 # movie info
-movie_list = ['Spider Man','Joker','Oppenhimer','Mission Impossible']
+movie_list = ['Spider Man','Joker','Oppenheimer','Mission Impossible']
 movie={
 'spider man':0,
 'joker': 1,
-'oppenhimer':2,
+'oppenheimer':2,
 'mission impossible':3
 }
 responses_movie_list=[

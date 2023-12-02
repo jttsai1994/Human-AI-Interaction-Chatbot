@@ -23,14 +23,14 @@ def start_booking(user):
             print("You still have time to make a decision! No worries!")
     else: #if the user already decided a movie -> ask if the user want to change
         wanna_change = False
-        if user.name:
+        if user.name: #display user name if the bot have asked
             msg= f''' 
-Hello {user.name}, you will watch {user.movie.upper()} on {user.visitDate} / {user.visitTime}
-        '''
+                Hello {user.name}, you will watch {user.movie.upper()} on {user.visitDate} / {user.visitTime}
+                '''
         else:
             msg= f''' 
-You will watch {user.movie.upper()} on {user.visitDate} / {user.visitTime}
-        '''
+                You will watch {user.movie.upper()} on {user.visitDate} / {user.visitTime}
+                '''
         print(f'{msg}')
         _ans = input('Do you want to change your booking? (Y/N) : ')
         if re.search('y*',_ans.lower())[0]:

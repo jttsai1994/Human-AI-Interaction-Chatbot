@@ -11,7 +11,7 @@ def ask_which_movie(user):
         if not user.movie:
             print(random.choice(responses_movie_list))
             time.sleep(1)
-            print("Seems like you haven't choose a movie to watch")
+            print("Seems like you haven't chosen a movie to watch")
             time.sleep(1)
             user_ans= input(f"What do you want to watch? (within {list(range(1,len(movie_list)+1))}):")
             try:

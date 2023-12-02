@@ -3,12 +3,16 @@ import re
 import random
 from params import responses_movie_list
 import params
+import time
 def ask_payment_method(user):
     movie_pattern = "|".join(movie_list).lower()
     leave = False
     while not (user.payMethod or leave):
         if not user.payMethod :
-            print("Seems like you haven't choose a payment method.")
+            print("It's over halfway of the process")
+            time.sleep(1)
+            print("Seems like you haven't chosen a payment method.")
+            time.sleep(1)
             user_ans= input("You can pay by card or cash. Which one would you like? :")
             if re.search('card',user_ans.lower()):
                 pay_method = re.search('card',user_ans.lower())[0]
