@@ -5,6 +5,7 @@ import choose_movie
 import choose_movie_time
 import choose_paymethod
 import time
+import confirm_movie_detail
 def booking(user):
     movie_pattern = "|".join(params.movie_list).lower()
     stop = False
@@ -14,6 +15,7 @@ def booking(user):
         if user.movie: #only ask for date, time and pay method if the movie is decided
             choose_movie_time.decide_date(user)
             choose_movie_time.decide_Time(user)
+            confirm_movie_detail.ask_to_confirm(user)
             choose_paymethod.ask_payment_method(user)
         elif not user.confirm:
             pass
