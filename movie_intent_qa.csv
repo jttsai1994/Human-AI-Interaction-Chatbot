@@ -73,6 +73,7 @@ Movie Listings,Can you tell me which films are currently playing in cinema?,
 Movie Listings,What's the list of movies currently being featured at the cinema?,
 Movie Listings,Can you share the current roster of films showing at the cinema?,
 Movie Listings,What's currently on the movie bill at the theater?,
+Movie Time,Do you have the timetable for all movies?,
 Movie Time,What time does the evening show  start?,
 Movie Time,Are there any late-night showings for the action movie this Friday?,
 Movie Time,When is the matinee for the romantic comedy playing this Sunday?,
@@ -84,6 +85,7 @@ Movie Time,What time can I catch the movie?,
 Movie Time,Can you share the timetable for the movie?,
 Movie Time,What are the viewing times for the movie?,
 Movie Time,Can you let me know when the movie is being shown?,
+Booking Process,How to make a movie reservation?,
 Booking Process,How can I book tickets for a movie?,
 Booking Process,What steps do I need to follow to book movie tickets online?,
 Booking Process,How do I go about reserving seats for a movie?,
@@ -104,6 +106,7 @@ Seat Availability,What's the seat status for the special screening of the classi
 Seat Availability,Can you check if there are any open seats left for the movie this weekend?,
 Seat Availability,Are there any available seats for the upcoming blockbuster movie on Saturday,
 Seat Availability,Can you verify if seats are still open for the late-night showing,
+Pricing_0,What is the price for adults?,In the morning:The ticket price is £10. In the evening: The ticket price is £15.
 Pricing_1,What is the ticket price for adults and children?,"In the morning: For adults, the ticket price is £10, and for children, it is £3. In the evening: For adults, the ticket price is £15, and for children, it is £5."
 Pricing_2,Are there any discounts available for senior citizens?,"Yes, senior citizens enjoy a discounted ticket price of £3 for morning shows and £5 for evening shows."
 Pricing_3,How much does it cost for a ticket to the evening show,"The ticket price for the evening show is £15 for adults, £5 for children, and £8 for students."
@@ -111,6 +114,7 @@ Pricing_4,What's the ticket price difference between adult and child tickets for
 Pricing_5,Are there any discounts available for students for the afternoon show?,"Yes, students receive a discounted ticket price of £5 for afternoon shows and £8 for evening shows."
 Pricing_6,Do you offer senior citizen discounts for the early morning movie screenings," Yes, senior citizens enjoy a discounted ticket price of £3 for morning shows and £5 for evening shows."
 Pricing_7,Are there any promotional offers or discounts for the midnight premiere of the film?,There are no additional discounts or promotional offers for the midnight premiere. The regular ticket prices apply.
+Pricing_8,What is the price for children?,In the morning:The ticket price is £3. In the evening: The ticket price is £5.
 Payment Methods_1,Can I pay for my movie tickets using digital wallets like Apple Pay or Google Pay,"Yes, we accept payments through digital wallets such as Apple Pay and Google Pay for online movie bookings."
 Payment Methods_2,What payment methods are accepted for online booking?,"You can use various payment methods for online booking, including credit cards, debit cards, digital wallets like Apple Pay and Google Pay, and online services such as PayPal."
 Payment Methods_3,Can I pay for the tickets with a credit card?,"Absolutely, credit card payments are accepted for purchasing movie tickets, both online and at the ticket counter."
@@ -140,6 +144,9 @@ Location_3,What's the street address of the cinema where the movie is playing?,"
 Location_4,Could you share the exact location of the movie theatre,"The movie theatre is situated at 233 Derby Rd, Nottingham NG7 1QN. You can easily locate it for an enjoyable movie experience."
 Location_5,Where am I able to locate the cinema,"You can locate our cinema at 233 Derby Rd, Nottingham NG7 1QN. It's easily accessible, and we look forward to welcoming you."
 Location_6,Could you direct me to the cinema by providing clear location instructions?,"Certainly! Head to 233 Derby Rd, Nottingham NG7 1QN. If you need precise directions, feel free to use a map app or contact our customer service for assistance."
+Location_7,Where is the cinema?,"Our cinema is located at 233 Derby Rd, Nottingham NG7 1QN."
+Location_8,How can I go to the theatre ,"You can find our cinema at 233 Derby Rd, Nottingham NG7 1QN. It's centrally located for your convenience."
+Location_9,How to go there?,"You can find our cinema at 233 Derby Rd, Nottingham NG7 1QN. It's centrally located for your convenience."
 Decide movie,I plan to catch Spider-Man on Monday,
 Decide movie,"This Tuesday, I'm aiming to watch Joker.",
 Decide movie,I'm eager to see Oppenheimer this upcoming Wednesday.,
