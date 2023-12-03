@@ -8,7 +8,8 @@ import name_management
 import booking_process
 import timetable
 import check_personal_confirmation as p_confirm
-import ask_booking
+import reply_booking_steps
+import ask_start_booking
 from joblib import load
 import re
 import random
@@ -58,11 +59,12 @@ def main():
             elif _intent =="Movie Listings":
                 response = random.choice(movie_list_replies)
                 print(response)
-                booking_process.booking(this_user)
+                ask_start_booking(this_user)
             elif _intent =="Movie Time":
                 timetable.which_timetable(this_user)
             elif _intent =="Booking Process":
-                ask_booking.start_booking(this_user)
+                reply_booking_steps.reply()
+                ask_start_booking(this_user)
             elif _intent =="Seat Availability":
                 response = f"I know your intent is {_intent}"
                 print(response)
