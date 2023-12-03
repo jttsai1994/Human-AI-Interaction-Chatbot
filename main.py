@@ -51,7 +51,7 @@ def main():
             elif _intent =="Decide movie":
                 booking_process.booking(this_user)
             elif _intent =="discoverability":
-                response = random.choice(replies[_intent]) + random.choice(movie_list_replies)
+                response = random.choice(replies[_intent]) + random.choice(responses_movie_list)
                 print(response)
             elif _intent =="Movie Listings":
                 print(random.choice(responses_movie_list))
