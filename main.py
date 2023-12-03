@@ -1,8 +1,6 @@
 import time
 import creating_QA_model
-# import match_rules
-# import find_intent
-# import qa_matching
+from params import responses_movie_list
 import params
 import name_management
 import booking_process
@@ -21,7 +19,6 @@ def main():
     qn_q= load('Qid_Q_dict')   #load params:qn_q
     q_a = load('QA_Dictionary') #load params:q_a
     replies = params.responses_usual
-    movie_list_replies = params.responses_movie_list
     print("Hi, I am a movie ticket booking assistant. Feel free to ask me some question or start booking a movie ticket.")
     while not stop:
         user_input = input(" (type anything to ask me, or enter 'stop' to quit) :")
@@ -43,11 +40,11 @@ def main():
                 response = random.choice(replies['greet'])
                 print(response)
                 time.sleep(2)
-                print(random.choice(movie_list_replies))
+                print(random.choice(responses_movie_list))
             elif _intent =="identity management":
                 name_management.replyName(this_user)
                 time.sleep(2)
-                print(random.choice(movie_list_replies))
+                print(random.choice(responses_movie_list))
             elif re.search('small*|Pricing*|Payment*|Location*',_intent) :  #response answer for Question and small talk
                 response = random.choice(q_a[qn_q[_intent]])
                 print(response)
@@ -57,13 +54,13 @@ def main():
                 response = random.choice(replies[_intent]) + random.choice(movie_list_replies)
                 print(response)
             elif _intent =="Movie Listings":
-                response = random.choice(movie_list_replies)
-                print(response)
+                print(random.choice(responses_movie_list))
                 ask_start_booking.ask(this_user)
             elif _intent =="Movie Time":
                 timetable.which_timetable(this_user)
             elif _intent =="Booking Process":
                 reply_booking_steps.reply()
+                print(random.choice(responses_movie_list))
                 ask_start_booking.ask(this_user)
             elif _intent =="Seat Availability":
                 response = f"I know your intent is {_intent}"

@@ -9,7 +9,6 @@ def ask(user):
     if not user.movie:
         print("Seems like you have not made any movie ticket reservation")
         time.sleep(1)
-        print(random.choice(responses_movie_list))
         _ans = input("Would you like to book a movie ticket right away? (Y/N):")
         if re.search('y*',_ans.lower())[0]:
             print("OK, let's start the booking process")
