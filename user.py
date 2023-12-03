@@ -28,3 +28,7 @@ class User:
         self.visitDate = None
     def reset_visitTime(self):
         self.visitTime = None
+    def confirm_ok(self):
+        self.confirm = True
+    def confirm_reset(self):
+        self.confirm = False

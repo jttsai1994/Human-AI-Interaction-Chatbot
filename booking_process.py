@@ -15,10 +15,9 @@ def booking(user):
         if user.movie: #only ask for date, time and pay method if the movie is decided
             choose_movie_time.decide_date(user)
             choose_movie_time.decide_Time(user)
-            confirm_movie_detail.ask_to_confirm(user)
+            if not user.confirm:
+                confirm_movie_detail.ask_to_confirm(user)
             choose_paymethod.ask_payment_method(user)
-        elif not user.confirm:
-            pass
         
         
         # response = match_rules.send_message(user_input)

@@ -3,6 +3,7 @@ import booking_process
 import random
 
 def lets_change_booking(user):
+    user.confirm_reset()
     print('Which details you want to change? Movie, Date, or Time? ')
     _change =input('Please type 1 for Movie, 2 for Date, 3 for Time: ')
     if _change == '1':
