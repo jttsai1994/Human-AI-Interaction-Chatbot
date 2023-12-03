@@ -18,7 +18,10 @@ def booking(user):
             if not user.confirm:
                 confirm_movie_detail.ask_to_confirm(user)
             choose_paymethod.ask_payment_method(user)
-        
+            print(f"Congrats! You just finished your reservation for watching {user.movie}")
+            time.sleep(1)
+            print(f"Looking forward to seeing you on {user.visitDate}/ {user.visitTime}!")
+
         
         # response = match_rules.send_message(user_input)
         
