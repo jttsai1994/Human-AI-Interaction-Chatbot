@@ -59,12 +59,12 @@ def main():
             elif _intent =="Movie Listings":
                 response = random.choice(movie_list_replies)
                 print(response)
-                ask_start_booking(this_user)
+                ask_start_booking.ask(this_user)
             elif _intent =="Movie Time":
                 timetable.which_timetable(this_user)
             elif _intent =="Booking Process":
                 reply_booking_steps.reply()
-                ask_start_booking(this_user)
+                ask_start_booking.ask(this_user)
             elif _intent =="Seat Availability":
                 response = f"I know your intent is {_intent}"
                 print(response)
