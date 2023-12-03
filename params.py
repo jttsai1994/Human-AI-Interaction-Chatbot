@@ -38,7 +38,22 @@ responses_usual ={
     "default":["Sorry, I can't understand you. Can you give more details","Please give me more details.","Can you say it again with specific keywords."],
     "greet":["Nice to meet you! Would you like to watch a movie?","Hi, let me help you to find a movie and enjoy in our cinema.","Hello, good to see you again! How about watching a movie?"],
     "thankyou":["You're Welcome! What else can I help you?","No worries, glad to help you here."],
-    "discoverability":["I am a chatbot to help you book a ticket to the movie.","I 'm here to help you get the ticket to the movie.","I can answer some simple question about how to book a movie ticket."]
+    "discoverability":[
+        """
+        I am a chatbot to help you book a ticket to the movie.
+        You can ask me questions about the information about the theatre.
+        Tell me that you want to make a reservation when you are ready.
+        """,
+        """
+        I 'm here to help you get the ticket to the movie.
+        You can ask me questions about the information about the theatre.
+        Tell me that you want to make a reservation when you are ready.
+        """,
+        """
+        I can answer some simple question about how to book a movie ticket.
+        You can ask me questions about the information about the theatre.
+        Tell me that you want to make a reservation when you are ready.
+        """]
 }
 # movie info
 movie_list = ['Spider Man','Joker','Oppenheimer','Mission Impossible']

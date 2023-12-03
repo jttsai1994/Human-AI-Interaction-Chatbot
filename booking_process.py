@@ -1,5 +1,4 @@
 import re
-from params import responses_movie_list
 import params
 import choose_movie
 import choose_movie_time
@@ -18,7 +17,7 @@ def booking(user):
             if not user.confirm:
                 confirm_movie_detail.ask_to_confirm(user)
             choose_paymethod.ask_payment_method(user)
-            print(f"Congrats! You just finished your reservation for watching {user.movie}")
+            print(f"Congrats! You just finished your reservation for watching {user.movie.upper()}")
             time.sleep(1)
             print(f"Looking forward to seeing you on {user.visitDate}/ {user.visitTime}!")
 
