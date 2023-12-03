@@ -36,8 +36,8 @@ def main():
                 _intent = creating_QA_model.answer(user_input)
             else:
                 _intent = creating_QA_model.answer_clf(user_input)
-            print(f"find intent by classifier : {creating_QA_model.answer_clf(user_input)}")
-            print(f"find intent by similariity: {creating_QA_model.answer(user_input)}")   #for debugging
+            # print(f"find intent by classifier : {creating_QA_model.answer_clf(user_input)}")
+            # print(f"find intent by similariity: {creating_QA_model.answer(user_input)}")   #for debugging
             if _intent =="initiate":
                 name_management.askName(this_user)               
                 response = random.choice(replies['greet'])
