@@ -78,4 +78,4 @@ def find_QA(msg):
     scores = [cosine_similarity(processed_newdata, _q) for _q in train_tf]
     possible_intent = intents[np.argmax(scores)]
 
-    return possible_intent
+    return q_a[qn_q[possible_intent]]
