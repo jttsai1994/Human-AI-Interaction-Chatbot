@@ -8,6 +8,7 @@ import timetable
 import check_personal_confirmation as p_confirm
 import reply_booking_steps
 import ask_start_booking
+import negative_response
 from joblib import load
 import re
 import random
@@ -35,6 +36,12 @@ def main():
                 _intent = creating_QA_model.answer_clf(user_input)
             # print(f"find intent by classifier : {creating_QA_model.answer_clf(user_input)}")
             # print(f"find intent by similariity: {creating_QA_model.answer(user_input)}")   #for debugging
+            if _intent =="Negative response":
+                actual_intent = negative_response.ask(this_user)
+                if actual_intent:
+                    _intent = actual_intent
+                else:
+                    pass
             if _intent =="initiate":
                 name_management.askName(this_user)               
                 print(f"Hey {this_user.name}! "+random.choice(replies['greet']))
@@ -65,8 +72,6 @@ def main():
                 ask_start_booking.ask(this_user)
             elif _intent =="Positive response":
                 print(random.choice(replies["thankyou"]) )
-            elif _intent =="Negative response":
-                print(random.choice(replies["negative"]) )
             elif _intent =="Confirmation":
                 p_confirm.booked_details(this_user)      
             elif _intent == 'default': #defualt reply
