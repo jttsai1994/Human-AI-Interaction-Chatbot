@@ -77,6 +77,7 @@ def find_QA(msg):
     processed_newdata = tfidf_transformer.transform(processed_newdata)
     scores = [cosine_similarity(processed_newdata, _q) for _q in train_tf]
     # possible_intent = intents[np.argmax(scores)]
+    print(scores)
     possible_q_index = np.argsort(scores)[-3:]
 
     return possible_q_index   
