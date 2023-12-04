@@ -37,12 +37,13 @@ def main():
             # print(f"find intent by similariity: {creating_QA_model.answer(user_input)}")   #for debugging
             if _intent =="initiate":
                 name_management.askName(this_user)               
-                print(f"{this_user.name}"+random.choice(replies['greet']))
+                print(f"Hey {this_user.name}! "+random.choice(replies['greet']))
                 time.sleep(2)
                 print(random.choice(responses_movie_list))
             elif _intent =="identity management":
                 name_management.replyName(this_user)
                 time.sleep(2)
+                print(f"Hi {this_user.name}!"+random.choice(replies['greet']))
                 print(random.choice(responses_movie_list))
             elif re.search('small*|Pricing*|Payment*|Location*',_intent) :  #response answer for Question and small talk
                 response = random.choice(q_a[qn_q[_intent]])

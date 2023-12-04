@@ -36,22 +36,22 @@ for intent, keys in keywords.items():
 responses_usual ={
     # "default":["default"],
     "default":["Sorry, I can't understand you. Can you give more details","Please give me more details.","Can you say it again with specific keywords."],
-    "greet":["Nice to meet you! Would you like to watch a movie?","Let me help you to find a movie and enjoy in our cinema.","Good to see you again! How about watching a movie?"],
+    "greet":["Nice to meet you! Would you like to watch a movie?","Let me help you to find a movie and enjoy in our cinema.","Good to see you! How about watching a movie?"],
     "thankyou":["You're Welcome! What else can I help you?","No worries, glad to help you here."],
     "discoverability":[
         """
-        I am a chatbot to help you book a ticket to the movie.
-        You can ask me questions about the information about the theatre.
-        Tell me that you want to make a reservation when you are ready.
+        I'm here as a chatbot to assist you in booking movie tickets. 
+        Feel free to inquire about theatre information.
+        When you're prepared, let me know you'd like to make a reservation.
         """,
         """
         I 'm here to help you get the ticket to the movie.
-        You can ask me questions about the information about the theatre.
-        Tell me that you want to make a reservation when you are ready.
+        Feel free to inquire about theatre information.
+        When you're prepared, let me know you'd like to make a reservation.
         """,
         """
         I can answer some simple question about how to book a movie ticket.
-        You can ask me questions about the information about the theatre.
+        You can ask me questions for the information of theatre.
         Tell me that you want to make a reservation when you are ready.
         """]
 }
