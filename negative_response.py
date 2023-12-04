@@ -3,6 +3,7 @@ import find_qa
 import random
 import params
 def ask(user):
+    leave = False
     intent ={
         1:"Movie Listings",2:"Movie Time",
         3:"Decide movie",4:"Confirmation",
