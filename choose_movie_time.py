@@ -9,14 +9,14 @@ def decide_date(user):
     days_pattern = '|'.join(list(days_mapping.values())).lower()
     while not user.visitDate:
         if not user.visitDate:
-            print(f"Seems like you haven't chosen the Date to watch {user.movie.upper()}")
-            time.sleep(1)
+            print(f"Now, you need to choose the Date to watch {user.movie.upper()}")
+            time.sleep(3)
             user_ans= input(f" We can watch {user.movie.upper()} on:{days_list}, which day would you like?: ")
             if re.search(days_pattern,user_ans.lower()):
                 user_date = re.search(days_pattern,user_ans.lower())[0]
                 user.visit_at(user_date.upper())
-                time.sleep(1)
-                print(f"OK, looking forward to seeing you on {user.visitDate}")
+                time.sleep(3)
+                print(f"No problem, looking forward to seeing you on {user.visitDate}")
             else:
                 time.sleep(1)
                 print(f"Sorry, we can't arrange with your answer.")
@@ -31,7 +31,7 @@ def decide_Time(user):
     movie_time = params.display_time[movie_index]
     while not user.visitTime:
         if not user.visitTime:
-            print(f"Seems like you haven't chosen the Time to watch {user.movie.upper()} on {user.visitDate}")
+            print(f"Time for you to pick the Time to watch {user.movie.upper()} on {user.visitDate}")
             time.sleep(1)
             user_ans= input(f"""
 You can choose one from the following timetable for {user.movie.upper()} --- {movie_time}: 
