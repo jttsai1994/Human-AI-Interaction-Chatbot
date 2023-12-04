@@ -71,3 +71,12 @@ def answer_clf(msg):
     # if predict_question_number:
     #     answer  = random.choice(q_a[qn_q[predict_question_number]])
     return possible_intent
+def find_QA(msg):
+    new_data = [msg]
+    processed_newdata = stem_vectorizer.transform(new_data) 
+    processed_newdata = tfidf_transformer.transform(processed_newdata)
+    scores = [cosine_similarity(processed_newdata, _q) for _q in train_tf]
+    # possible_intent = intents[np.argmax(scores)]
+    possible_q_index = np.argpartition(scores,-5)[-5:]
+
+    return possible_q_index   
