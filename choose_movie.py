@@ -11,7 +11,7 @@ def ask_which_movie(user):
         if not user.movie:
             print(random.choice(responses_movie_list))
             time.sleep(1)
-            print("Seems like you haven't chosen a movie to watch")
+            print("First, it seems like you haven't chosen a movie to watch")
             time.sleep(1)
             user_ans= input(f"What do you want to watch? (within {list(range(1,len(movie_list)+1))}):")
             try:
@@ -19,7 +19,7 @@ def ask_which_movie(user):
                     interested_movie_index = int(user_ans)-1
                     user_movie = movie_list[interested_movie_index].lower()
                     user.target_movie(user_movie)
-                    print(f"OK, we will choose {user_movie.upper()} for you")
+                    print(f"Got it! We will choose {user_movie.upper()} for you")
                     time.sleep(1)
                 else:
                     print(f"Sorry, we can't arrange with your answer.")

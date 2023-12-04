@@ -19,7 +19,7 @@ def main():
     qn_q= load('Qid_Q_dict')   #load params:qn_q
     q_a = load('QA_Dictionary') #load params:q_a
     replies = params.responses_usual
-    print("Hi, I am a movie ticket booking assistant. Feel free to ask me some question or start booking a movie ticket.")
+    print(random.choice(replies["discoverability"]) )
     while not stop:
         user_input = input(" (type anything to ask me, or enter 'stop' to quit) :")
         if user_input.lower() == 'stop':
@@ -37,8 +37,7 @@ def main():
             # print(f"find intent by similariity: {creating_QA_model.answer(user_input)}")   #for debugging
             if _intent =="initiate":
                 name_management.askName(this_user)               
-                response = random.choice(replies['greet'])
-                print(response)
+                print(f"{this_user.name}"+random.choice(replies['greet']))
                 time.sleep(2)
                 print(random.choice(responses_movie_list))
             elif _intent =="identity management":
