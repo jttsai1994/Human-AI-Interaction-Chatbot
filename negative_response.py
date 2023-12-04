@@ -18,6 +18,8 @@ def ask(user):
     4. Confirm your booking
     5. What can the chatbot do
     6. Asking the bot for knowing the username
+
+    Type "no" if none of the above is what you want to ask.
 """
     print(random.choice(params.responses_usual['negative']))
     while not leave:
@@ -25,7 +27,7 @@ def ask(user):
         if ans_index in list(intent.keys()):
             return intent[ans_index]
         else:
-            print(f"Sorry you must type in an number within {list(range(1,7))}")
+            print(f"Sorry you must type in an number within {list(range(1,7))}, OR")
             time.sleep(2)
             decide_yet = input("Are you asking for information about theatre location, ticket price or payment method (Y/N): ")
             if 'n' in decide_yet.lower():
