@@ -10,15 +10,15 @@ def decide_date(user):
     while not user.visitDate:
         if not user.visitDate:
             print(f"Now, you need to choose the Date to watch {user.movie.upper()}")
-            time.sleep(3)
+            time.sleep(2)
             user_ans= input(f" We can watch {user.movie.upper()} on:{days_list}, which day would you like?: ")
             if re.search(days_pattern,user_ans.lower()):
                 user_date = re.search(days_pattern,user_ans.lower())[0]
                 user.visit_at(user_date.upper())
-                time.sleep(3)
+                time.sleep(2)
                 print(f"No problem, looking forward to seeing you on {user.visitDate}")
             else:
-                time.sleep(1)
+                time.sleep(2)
                 print(f"Sorry, we can't arrange with your answer.")
         else:
             pass
@@ -32,7 +32,7 @@ def decide_Time(user):
     while not user.visitTime:
         if not user.visitTime:
             print(f"Time for you to pick the Time to watch {user.movie.upper()} on {user.visitDate}")
-            time.sleep(1)
+            time.sleep(2)
             user_ans= input(f"""
 You can choose one from the following timetable for {user.movie.upper()} --- {movie_time}: 
 please type in the index of time that you select. (within {list(range(1,len(movie_time)+1))})

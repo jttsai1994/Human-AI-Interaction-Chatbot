@@ -10,9 +10,9 @@ def ask_payment_method(user):
     while not (user.payMethod or leave):
         if not user.payMethod :
             print("It's over halfway of the process")
-            time.sleep(3)
+            time.sleep(2)
             print("Now you have to choose a payment method.")
-            time.sleep(3)
+            time.sleep(2)
             user_ans= input("You can pay by card or cash. Which one would you like? :")
             if re.search('card',user_ans.lower()):
                 pay_method = re.search('card',user_ans.lower())[0]

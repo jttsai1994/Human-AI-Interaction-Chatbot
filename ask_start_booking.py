@@ -30,4 +30,4 @@ def ask(user):
         if re.search('y*',_ans.lower())[0]:
             change_booking.lets_change_booking(user)  
         else:
-            print(f"Enjoy the movie {user.movie} on {user.visitDate}!")
+            print(f"Enjoy the movie {user.movie.upper()} on {user.visitDate}!")

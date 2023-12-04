@@ -19,7 +19,7 @@ You will watch {user.movie.upper()} on {user.visitDate} / {user.visitTime}
         if re.search('y*',_ans.lower())[0]:
             wanna_change = True
         else:
-            print(f"Enjoy the movie {user.movie} on {user.visitDate}!")
+            print(f"Enjoy the movie {user.movie.upper()} on {user.visitDate}!")
         if wanna_change:
             change_booking.lets_change_booking(user)
     else:

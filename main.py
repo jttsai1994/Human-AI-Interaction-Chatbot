@@ -52,7 +52,7 @@ def main():
                 booking_process.booking(this_user)
             elif _intent =="discoverability":
                 print(random.choice(replies[_intent]) )
-                time.sleep(5)
+                time.sleep(2)
                 print(random.choice(responses_movie_list))
             elif _intent =="Movie Listings":
                 print(random.choice(responses_movie_list))
