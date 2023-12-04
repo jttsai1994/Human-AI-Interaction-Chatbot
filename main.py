@@ -63,9 +63,10 @@ def main():
                 reply_booking_steps.reply()
                 print(random.choice(responses_movie_list))
                 ask_start_booking.ask(this_user)
-            elif _intent =="Seat Availability":
-                response = f"I know your intent is {_intent}"
-                print(response)
+            elif _intent =="Positive response":
+                print(random.choice(replies["thankyou"]) )
+            elif _intent =="Negative response":
+                print(random.choice(replies["negative"]) )
             elif _intent =="Confirmation":
                 p_confirm.booked_details(this_user)      
             elif _intent == 'default': #defualt reply
