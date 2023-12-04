@@ -23,7 +23,7 @@ def ask(user):
     while not leave:
         ans_index = input(f"{choosing_String} :")
         if ans_index in list(intent.keys()):
-            return intent(ans_index)
+            return intent[ans_index]
         else:
             print(f"Sorry you must type in an number within {list(range(1,7))}")
             time.sleep(2)
