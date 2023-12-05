@@ -23,6 +23,7 @@ def main():
     print(random.choice(replies["discoverability"]) )
     while not stop:
         user_input = input(" (type anything to ask me, or enter 'stop' to quit) :")
+        ask_from_ng_feedback = False
         if user_input.lower() == 'stop':
             print("Goodbye!")
             stop = True
@@ -40,6 +41,7 @@ def main():
                 actual_intent = negative_response.ask(this_user)
                 if actual_intent:
                     _intent = actual_intent
+                    ask_from_ng_feedback = True
                 else:
                     pass
             if _intent =="initiate":
@@ -57,7 +59,7 @@ def main():
                 print(response)
             elif _intent =="Decide movie":
                 booking_process.booking(this_user)
-                if this_user.movie: # if user already make a booking-> ask to confirm
+                if (this_user.movie and ask_from_ng_feedback): # if user already make a booking-> ask to confirm
                     p_confirm.booked_details(this_user)
             elif _intent =="discoverability":
                 print(random.choice(replies[_intent]) )
