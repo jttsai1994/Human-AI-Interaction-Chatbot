@@ -58,9 +58,10 @@ def main():
                 response = random.choice(q_a[qn_q[_intent]])
                 print(response)
             elif _intent =="Decide movie":
-                booking_process.booking(this_user)
+                #check this condition first
                 if (this_user.movie and ask_from_ng_feedback): # if user already make a booking-> ask to confirm
                     p_confirm.booked_details(this_user)
+                booking_process.booking(this_user)
             elif _intent =="discoverability":
                 print(random.choice(replies[_intent]) )
                 time.sleep(2)
