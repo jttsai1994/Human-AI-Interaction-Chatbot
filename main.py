@@ -57,6 +57,8 @@ def main():
                 print(response)
             elif _intent =="Decide movie":
                 booking_process.booking(this_user)
+                if this_user.movie: # if user already make a booking-> ask to confirm
+                    p_confirm.booked_details(this_user)
             elif _intent =="discoverability":
                 print(random.choice(replies[_intent]) )
                 time.sleep(2)
