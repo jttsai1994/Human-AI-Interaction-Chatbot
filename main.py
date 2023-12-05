@@ -40,7 +40,6 @@ def main():
                 actual_intent = negative_response.ask(this_user)
                 if actual_intent:
                     _intent = actual_intent
-                    print(_intent)
                 else:
                     pass
             if _intent =="initiate":
