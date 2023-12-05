@@ -27,7 +27,7 @@ def ask(user):
         if ans_index in list(intent.keys()):
             return intent[ans_index]
         else:
-            print(f"Sorry you must type in an number within {list(range(1,7))}, OR")
+            print(f"Sorry you must type in a number within {list(range(1,7))}, OR")
             time.sleep(2)
             decide_yet = input("Are you asking for information about theatre location, ticket price or payment method (Y/N): ")
             if 'n' in decide_yet.lower():

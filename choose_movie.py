@@ -29,7 +29,7 @@ def ask_which_movie(user):
                     if 'n' in decide_yet.lower():
                         leave = True
             except:
-                print(f"Sorry you must type in an number within {list(range(1,len(movie_list)+1))}")
+                print(f"Sorry you must type in a number within {list(range(1,len(movie_list)+1))}")
                 time.sleep(2)
                 decide_yet = input("Have you decided which movie? (Y/N): ")
                 if 'n' in decide_yet.lower():
