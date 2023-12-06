@@ -25,6 +25,7 @@ def main():
         user_input = input(" (type anything to ask me, or enter 'stop' to quit) :")
         ask_from_ng_feedback = False
         if user_input.lower() == 'stop':
+            print("Please fill this form to help me improve! https://forms.gle/iEiUXB9FiDKymaPE7")
             print("Goodbye!")
             stop = True
         # response = match_rules.send_message(user_input)
