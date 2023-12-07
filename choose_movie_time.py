@@ -36,7 +36,7 @@ def decide_Time(user):
             user_ans= input(f"""
 You can choose one from the following timetable for {user.movie.upper()} --- {movie_time}: 
 please type in the index of time that you select. (within {list(range(1,len(movie_time)+1))})
-                                                """)
+                                               : """)
             if int(user_ans) in list(range(1,len(movie_time)+1)):
                 user.visit_time(movie_time[int(user_ans)-1])
                 print(f"OK, looking forward to seeing you at {user.visitTime}")
